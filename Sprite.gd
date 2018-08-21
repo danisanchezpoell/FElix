@@ -5,18 +5,16 @@ export (int) var AP
 export (int) var Strenght 
 
 var _HP
-var _AP
+var _Exertion
 
 export (int) var Attackcost
 
 export(String,"Thunder","Grass","Fire","Water") var Attacktype
 
-func _ready():
-	$AP_Pokemon.text = str(AP)
 
 func attack(target):
-	if _AP < Attackcost:
-		get_node("CombatText").set_text("Not Enough AP. Wait and then try again")
+	if _Exertion < Attackcost:
+		get_node("CombatText").set_text("Not Enough Exertion. Wait and then try again")
 		return
 	var attackpower
 	if Attacktype == "Thunder":
@@ -24,6 +22,4 @@ func attack(target):
 	elif Attacktype == "Grass":
 		attackpower == "Strenght"
 	elif Attacktype == "Fire":
-		attackpower =="Strenght"
-	elif Attacktype == "Water":
 		attackpower =="Strenght"

@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="PokeGame"
+config/name="pokemon"
 config/icon="res://icon.png"
 
 [rendering]
