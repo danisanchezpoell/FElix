@@ -11,6 +11,7 @@ export (int) var Attackcost
 
 export(String,"Thunder","Grass","Fire","Water") var Attacktype
 
+
 func attack(target):
 	if _Exertion < Attackcost:
 		get_node("CombatText").set_text("Not Enough Exertion. Wait and then try again")
@@ -22,4 +23,5 @@ func attack(target):
 		attackpower == "Strenght"
 	elif Attacktype == "Fire":
 		attackpower =="Strenght"
-
+	elif Attacktype == "Water":
+		attackpower =="Strenght"
