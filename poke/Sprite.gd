@@ -2,7 +2,7 @@ extends Sprite
 
 export (int) var HP
 export (int) var AP
-export (int) var 
+export (int) var Strenght 
 
 var _HP
 var _Exertion
@@ -17,6 +17,9 @@ func attack(target):
 		get_node("CombatText").set_text("Not Enough Exertion. Wait and then try again")
 		return
 	var attackpower
-	if Attacktype == "Thunder","Grass","Fire","Water",:
+	if Attacktype == "Thunder":
 		attackpower == "Strenght"
-	
+	elif Attacktype == "Grass":
+		attackpower == "Strenght"
+	elif Attacktype == "Fire":
+		attackpower =="Strenght"
