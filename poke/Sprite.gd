@@ -23,3 +23,5 @@ func attack(target):
 		attackpower == "Strenght"
 	elif Attacktype == "Fire":
 		attackpower =="Strenght"
+	elif Attacktype == "Water":
+		attackpower =="Strenght"
