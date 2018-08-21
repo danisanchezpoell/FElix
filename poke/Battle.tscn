@@ -3,8 +3,26 @@
 [ext_resource path="res://Battle.gd" type="Script" id=1]
 [ext_resource path="res://Sprite.tscn" type="PackedScene" id=2]
 [ext_resource path="res://knopfnichtlöschen.gd" type="Script" id=3]
-[ext_resource path="res://späterlöschen.gd" type="Script" id=4]
-[ext_resource path="res://TurnTime.gd" type="Script" id=5]
+[ext_resource path="res://TurnTime.gd" type="Script" id=4]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Button
+
+# class member variables go here, for example:
+# var a = 2
+# var b = \"textvar\"
+
+func _ready():
+	# Called when the node is added to the scene for the first time.
+	# Initialization here
+	pass
+
+#func _process(delta):
+#	# Called every frame. Delta is time since last frame.
+#	# Update game logic here.
+#	pass
+"
 
 [node name="battle" type="Node2D" index="0"]
 
@@ -159,7 +177,7 @@ group = null
 text = "END TURN"
 flat = false
 align = 1
-script = ExtResource( 4 )
+script = SubResource( 1 )
 
 [node name="Label2" type="Label" parent="." index="8"]
 
@@ -272,6 +290,6 @@ process_mode = 1
 wait_time = 20.0
 one_shot = false
 autostart = true
-script = ExtResource( 5 )
+script = ExtResource( 4 )
 
 
