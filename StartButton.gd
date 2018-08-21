@@ -8,12 +8,7 @@ func _ready():
 	connect("pressed", self,"on_pressed")
 	
 func on_pressed():
-	print ("pressed")
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+	get_tree().change_scene("res://HIntergrund.tscn")
+	print("gedrückt.")
+	# Remove the current level
+	
