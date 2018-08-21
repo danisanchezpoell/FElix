@@ -33,7 +33,7 @@ func _on_at2_pressed():
 	$spieler/Sprite.AP -=5
 	if $spieler/Sprite.AP < 10:
 		$spieler/Label2.text = "Not Enough AP!"
-	$spieler/Sprite/Sprite.show()
+	$AnimationPlayer.play("donner")
 	var attackpower = $spieler/Sprite.Strenght
 	$gegner/ProgressBar2
 	

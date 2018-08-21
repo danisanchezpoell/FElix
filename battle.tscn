@@ -1,11 +1,54 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://battle.gd" type="Script" id=1]
 [ext_resource path="res://poke/mach mich uauf.jpg" type="Texture" id=2]
 [ext_resource path="res://Sprite.tscn" type="PackedScene" id=3]
 [ext_resource path="res://poke/Pikachu gelb.png" type="Texture" id=4]
-[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://poke/blitz.png" type="Texture" id=5]
 [ext_resource path="res://poke/endivie grün.png" type="Texture" id=6]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "donner"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("spieler/Sprite/Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1467.62, 120.751 ), Vector2( 4082.58, 129.879 ), Vector2( 4778.83, 129.879 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("spieler/Sprite/Sprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("spieler/Sprite/Sprite:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 90.0, 90.0, 0.0 ]
+}
 
 [node name="Kampfszene" type="Node2D" index="0"]
 
@@ -18,6 +61,8 @@ scale = Vector2( 0.660099, 0.515103 )
 texture = ExtResource( 2 )
 
 [node name="spieler" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="Label2" type="Label" parent="spieler" index="0"]
 
@@ -54,10 +99,10 @@ Attacktype = "Water"
 [node name="Sprite" type="Sprite" parent="spieler/Sprite" index="0"]
 
 visible = false
-position = Vector2( 4568.33, 175.516 )
+position = Vector2( 4778.83, 129.879 )
 scale = Vector2( 7.39597, -8.19285 )
 texture = ExtResource( 5 )
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="ProgressBar" type="ProgressBar" parent="spieler" index="2"]
 
@@ -292,6 +337,8 @@ max_lines_visible = -1
 
 [node name="gegner" type="Node2D" parent="." index="4"]
 
+editor/display_folded = true
+
 [node name="Label4" type="Label" parent="gegner" index="0"]
 
 anchor_left = 0.0
@@ -347,6 +394,16 @@ value = 100.0
 exp_edit = false
 rounded = false
 percent_visible = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/donner = SubResource( 1 )
+blend_times = [  ]
 
 [connection signal="pressed" from="spieler/at4" to="." method="_on_at4_pressed"]
 
