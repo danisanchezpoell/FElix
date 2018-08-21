@@ -10,7 +10,7 @@ texture = ExtResource( 1 )
 script = ExtResource( 2 )
 HP = 100
 AP = 50
-Strength = 100
+Strenght = null
 Attackcost = 5
 Attacktype = "Grass"
 
