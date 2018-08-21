@@ -11,7 +11,11 @@ config_version=3
 [application]
 
 config/name="pokemon"
+<<<<<<< HEAD
+run/main_scene="res://Battle.tscn"
+=======
 run/main_scene="res://Sprite.tscn"
+>>>>>>> 6380b69b3bd4cdfbbc64ebed371006350926b412
 config/icon="res://icon.png"
 
 [rendering]
