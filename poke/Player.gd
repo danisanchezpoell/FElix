@@ -5,6 +5,8 @@ extends KinematicBody2D
 # var b = "textvar"
 
 func _ready():
+	
+	add_to_group("player")
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	pass
