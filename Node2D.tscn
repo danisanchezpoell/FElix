@@ -8,13 +8,10 @@
 [node name="Sprite" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 131, 226 )
-<<<<<<< HEAD:Node2D.tscn
 texture = ExtResource( 2 )
 HP = 100
 AP = 50
 Strength = 50
-=======
->>>>>>> 71c6d01157b8173611b3cfa4cf42475eec85f48a:poke/Node2D.tscn
 Attackcost = 10
 Attacktype = "Grass"
 
@@ -91,10 +88,7 @@ position = Vector2( 866, 250 )
 texture = ExtResource( 2 )
 HP = null
 AP = null
-<<<<<<< HEAD:Node2D.tscn
 Strength = null
-=======
->>>>>>> 71c6d01157b8173611b3cfa4cf42475eec85f48a:poke/Node2D.tscn
 Attackcost = null
 Attacktype = null
 
