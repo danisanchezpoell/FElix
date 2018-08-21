@@ -32,9 +32,13 @@ script = ExtResource( 1 )
 
 [node name="Sprite" parent="." index="0" instance=ExtResource( 2 )]
 
+<<<<<<< HEAD
 position = Vector2( 135.072, 236.058 )
 scale = Vector2( 0.156115, 0.207849 )
 texture = ExtResource( 3 )
+=======
+position = Vector2( 131, 226 )
+>>>>>>> 6380b69b3bd4cdfbbc64ebed371006350926b412
 Attackcost = 10
 
 [node name="AP_Pokemon" type="Label" parent="Sprite" index="0"]
@@ -111,7 +115,11 @@ position = Vector2( 870.647, 270.75 )
 scale = Vector2( 0.156303, 0.16798 )
 texture = ExtResource( 5 )
 HP = null
+<<<<<<< HEAD
 Strenght = 0
+=======
+AP = null
+>>>>>>> 6380b69b3bd4cdfbbc64ebed371006350926b412
 Attackcost = null
 Attacktype = "Water"
 
