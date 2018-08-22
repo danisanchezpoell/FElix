@@ -8,8 +8,8 @@
 
 [node name="start screen odaso lol" type="Sprite" index="0"]
 
-position = Vector2( 561.579, 330.097 )
-scale = Vector2( 0.890598, 0.926842 )
+position = Vector2( 510.258, 298.602 )
+scale = Vector2( 0.547126, 0.540371 )
 texture = ExtResource( 1 )
 
 [node name="Node2D" type="Node2D" parent="." index="0"]

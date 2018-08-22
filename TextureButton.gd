@@ -8,7 +8,7 @@ func _ready():
 	connect("pressed", self,"on_pressed")
 	
 func on_pressed():
-	get_tree().change_scene("res://HIntergrund.tscn")
+	get_tree().change_scene("res://map.tscn")
 	print("gedrückt.")
 	
 
