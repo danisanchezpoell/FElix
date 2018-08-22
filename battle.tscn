@@ -26,7 +26,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1467.62, 120.751 ), Vector2( 4082.58, 129.879 ), Vector2( 4778.83, 129.879 ) ]
+"values": [ Vector2( 1467.62, 120.751 ), Vector2( 4082.58, 129.879 ), Vector2( 7309.45, -72.3887 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("spieler/Sprite/Sprite:visible")
@@ -35,10 +35,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 0.8, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 0.7, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ true, false, true, false, true, false ]
+"values": [ true, false, false, true, false ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("spieler/Sprite/Sprite:rotation_degrees")
@@ -47,7 +47,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.4, 0.5 ),
+"times": PoolRealArray( 0, 0.5, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 90.0, 90.0, 0.0 ]
@@ -56,7 +56,7 @@ tracks/2/keys = {
 [sub_resource type="Animation" id=2]
 
 resource_name = "Elektroball"
-length = 1.0
+length = 2.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -66,7 +66,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -78,7 +78,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 360.0 ]
@@ -90,10 +90,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 295.119, 182.686 ), Vector2( 798.492, 192.508 ) ]
+"values": [ Vector2( -85.0348, 723.769 ), Vector2( 798.492, 192.508 ), Vector2( 834.291, 693.698 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -124,7 +124,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.8 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1037.3, 100.718 ), Vector2( 4697.87, 84.2427 ) ]
+"values": [ Vector2( 1037.3, 100.718 ), Vector2( 7203.33, 271.049 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -152,14 +152,14 @@ script = ExtResource( 1 )
 
 [node name="mach mich uauf" type="Sprite" parent="." index="0"]
 
-position = Vector2( 715.451, 556.449 )
+position = Vector2( 715.451, 553.431 )
 scale = Vector2( 1.31976, 0.912091 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
 [node name="spieler" type="Node2D" parent="." index="1"]
 
-position = Vector2( -0.588654, 478.607 )
+position = Vector2( 149.324, 439.836 )
 
 [node name="Label2" type="Label" parent="spieler" index="0"]
 
@@ -184,8 +184,7 @@ max_lines_visible = -1
 
 [node name="Sprite" parent="spieler" index="1" instance=ExtResource( 3 )]
 
-editor/display_folded = true
-position = Vector2( 120.176, 232.484 )
+position = Vector2( 124.053, 229.9 )
 scale = Vector2( 0.15165, 0.134512 )
 texture = ExtResource( 4 )
 HP = 500
@@ -195,7 +194,7 @@ Attackcost = 10
 [node name="Sprite" type="Sprite" parent="spieler/Sprite" index="0"]
 
 visible = false
-position = Vector2( 4778.83, 129.879 )
+position = Vector2( 7309.45, -72.3887 )
 scale = Vector2( 7.39597, -8.19285 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -203,7 +202,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="Sprite2" type="Sprite" parent="spieler/Sprite" index="1"]
 
 visible = false
-position = Vector2( 4697.87, 84.2427 )
+position = Vector2( 7203.33, 271.049 )
 scale = Vector2( 7.39597, -8.19285 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -340,10 +339,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 6.0
-margin_top = 298.0
-margin_right = 25.0
-margin_bottom = 312.0
+margin_left = 11.0
+margin_top = 289.0
+margin_right = 30.0
+margin_bottom = 303.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -362,9 +361,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 188.0
-margin_top = 232.0
+margin_top = 237.0
 margin_right = 205.0
-margin_bottom = 246.0
+margin_bottom = 251.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -382,10 +381,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 217.0
-margin_top = 233.0
-margin_right = 308.0
-margin_bottom = 247.0
+margin_left = 220.0
+margin_top = 237.0
+margin_right = 311.0
+margin_bottom = 251.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -403,10 +402,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 808.0
-margin_top = 645.0
-margin_right = 854.0
-margin_bottom = 659.0
+margin_left = 1352.0
+margin_top = 651.0
+margin_right = 1398.0
+margin_bottom = 665.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -424,10 +423,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 91.0
-margin_top = 643.0
-margin_right = 140.0
-margin_bottom = 657.0
+margin_left = 245.0
+margin_top = 608.0
+margin_right = 294.0
+margin_bottom = 622.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -441,10 +440,12 @@ max_lines_visible = -1
 
 [node name="gegner" type="Node2D" parent="." index="4"]
 
+position = Vector2( 544.081, -42.6476 )
+
 [node name="Sprite3" type="Sprite" parent="gegner" index="0"]
 
 visible = false
-position = Vector2( 798.492, 192.508 )
+position = Vector2( 834.291, 693.698 )
 rotation = 6.28319
 scale = Vector2( 0.698984, -0.736309 )
 texture = ExtResource( 7 )
@@ -452,7 +453,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Sprite2" parent="gegner" index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 837.896, 710.583 )
+position = Vector2( 832.447, 747.643 )
 scale = Vector2( 0.580203, 0.584984 )
 texture = ExtResource( 8 )
 HP = 500
@@ -462,7 +463,7 @@ Attacktype = null
 [node name="Sprite" type="Sprite" parent="gegner" index="2"]
 
 visible = false
-position = Vector2( 106.287, 228.419 )
+position = Vector2( -271.754, 705.266 )
 scale = Vector2( 0.578103, 0.699188 )
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Visibility" ]
@@ -473,10 +474,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 701.0
-margin_top = 774.0
-margin_right = 720.0
-margin_bottom = 788.0
+margin_left = 692.0
+margin_top = 809.0
+margin_right = 711.0
+margin_bottom = 823.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -494,10 +495,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 738.0
-margin_top = 765.0
-margin_right = 970.0
-margin_bottom = 794.0
+margin_left = 744.0
+margin_top = 809.0
+margin_right = 976.0
+margin_bottom = 838.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
