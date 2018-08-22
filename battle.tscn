@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://battle.gd" type="Script" id=1]
 [ext_resource path="res://poke/mach mich uauf.jpg" type="Texture" id=2]
 [ext_resource path="res://Sprite.tscn" type="PackedScene" id=3]
 [ext_resource path="res://poke/Pikachu gelb.png" type="Texture" id=4]
 [ext_resource path="res://poke/blitz.png" type="Texture" id=5]
-[ext_resource path="res://poke/endivie grün.png" type="Texture" id=6]
+[ext_resource path="res://poke/blitzball haha.png" type="Texture" id=6]
+[ext_resource path="res://poke/endivie grün.png" type="Texture" id=7]
 
 [sub_resource type="Animation" id=1]
 
@@ -50,6 +51,49 @@ tracks/2/keys = {
 "values": [ 90.0, 90.0, 0.0 ]
 }
 
+[sub_resource type="Animation" id=2]
+
+resource_name = "Elektroball"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("gegner/Sprite3:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("gegner/Sprite3:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("gegner/Sprite3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 295.119, 182.686 ), Vector2( 798.492, 192.508 ) ]
+}
+
 [node name="Kampfszene" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
@@ -59,10 +103,9 @@ script = ExtResource( 1 )
 position = Vector2( 342.89, 295.978 )
 scale = Vector2( 0.660099, 0.515103 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
 
 [node name="spieler" type="Node2D" parent="." index="1"]
-
-editor/display_folded = true
 
 [node name="Label2" type="Label" parent="spieler" index="0"]
 
@@ -92,9 +135,8 @@ scale = Vector2( 0.15165, 0.134512 )
 texture = ExtResource( 4 )
 HP = 500
 AP = 100
-Strenght = null
 Attackcost = 10
-Attacktype = "Water"
+Attacktype = "Thunder"
 
 [node name="Sprite" type="Sprite" parent="spieler/Sprite" index="0"]
 
@@ -337,9 +379,25 @@ max_lines_visible = -1
 
 [node name="gegner" type="Node2D" parent="." index="4"]
 
-editor/display_folded = true
+[node name="Sprite3" type="Sprite" parent="gegner" index="0"]
 
-[node name="Label4" type="Label" parent="gegner" index="0"]
+visible = false
+position = Vector2( 798.492, 192.508 )
+rotation = 6.28319
+scale = Vector2( 0.698984, -0.736309 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Sprite2" parent="gegner" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 828.565, 244.043 )
+scale = Vector2( 0.580203, 0.584984 )
+texture = ExtResource( 7 )
+HP = 500
+Attackcost = null
+Attacktype = null
+
+[node name="Label4" type="Label" parent="gegner" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -360,17 +418,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Sprite2" parent="gegner" index="1" instance=ExtResource( 3 )]
-
-position = Vector2( 828.565, 244.043 )
-scale = Vector2( 0.580203, 0.584984 )
-texture = ExtResource( 6 )
-HP = 500
-Strenght = null
-Attackcost = null
-Attacktype = null
-
-[node name="ProgressBar2" type="ProgressBar" parent="gegner" index="2"]
+[node name="ProgressBar2" type="ProgressBar" parent="gegner" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -403,6 +451,16 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/donner = SubResource( 1 )
+blend_times = [  ]
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="6"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Elektroball = SubResource( 2 )
 blend_times = [  ]
 
 [connection signal="pressed" from="spieler/at4" to="." method="_on_at4_pressed"]
