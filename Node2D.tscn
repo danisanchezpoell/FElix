@@ -1,19 +1,15 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Sprite.tscn" type="PackedScene" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://ProgressBar.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D" index="0"]
 
 [node name="Sprite" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 131, 226 )
-texture = ExtResource( 2 )
-HP = 100
-AP = 50
-Strength = 50
+Strenght = null
 Attackcost = 10
-Attacktype = "Grass"
 
 [node name="Button" type="Button" parent="." index="1"]
 
@@ -85,10 +81,9 @@ max_lines_visible = -1
 [node name="Sprite2" parent="." index="4" instance=ExtResource( 1 )]
 
 position = Vector2( 866, 250 )
-texture = ExtResource( 2 )
 HP = null
 AP = null
-Strength = null
+Strenght = null
 Attackcost = null
 Attacktype = null
 
@@ -179,5 +174,57 @@ text = "du"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="ProgressBar" type="ProgressBar" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 35.0
+margin_top = 451.0
+margin_right = 309.0
+margin_bottom = 495.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 100.0
+exp_edit = false
+rounded = false
+percent_visible = true
+script = ExtResource( 2 )
+
+[node name="ProgressBar2" type="ProgressBar" parent="." index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 679.0
+margin_top = 455.0
+margin_right = 953.0
+margin_bottom = 499.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 100.0
+exp_edit = false
+rounded = false
+percent_visible = true
+script = ExtResource( 2 )
 
 
