@@ -6,7 +6,7 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://muenze.tscn" type="PackedScene" id=5]
 
-[node name="GAME" type="Node" index="0"]
+[node name="GAME" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -14,8 +14,8 @@ script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-position = Vector2( 794.768, 436.73 )
-scale = Vector2( 1.66184, 1.90869 )
+position = Vector2( 620.275, 415 )
+scale = Vector2( 1.32103, 1.82381 )
 texture = ExtResource( 3 )
 
 [node name="KinematicBody2D" parent="." index="2" instance=ExtResource( 4 )]

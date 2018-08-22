@@ -18,6 +18,10 @@ config/icon="res://icon.png"
 global="*res://global.gd"
 Manager="*res://Manager.gd"
 
+[display]
+
+window/size/fullscreen=true
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
