@@ -7,7 +7,7 @@
 
 [node name="start screen odaso lol" type="Sprite" index="0"]
 
-position = Vector2( 512.2, 300.616 )
+position = Vector2( 512.2, 295.037 )
 scale = Vector2( 0.533472, 0.552938 )
 texture = ExtResource( 1 )
 
