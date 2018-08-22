@@ -6,7 +6,7 @@
 [ext_resource path="res://poke/start button xd.png" type="Texture" id=4]
 [ext_resource path="res://TextureButton.gd" type="Script" id=5]
 
-[node name="start screen odaso lol" type="Sprite" index="0"]
+[node name="start screen odaso lol" type="Sprite"]
 
 position = Vector2( 510.258, 298.602 )
 scale = Vector2( 0.547126, 0.540371 )

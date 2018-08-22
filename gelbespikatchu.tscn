@@ -9,7 +9,7 @@
 
 [node name="Sprite2" type="Sprite" parent="." index="0"]
 
-position = Vector2( 695.906, 446.164 )
+position = Vector2( 848.017, 382.784 )
 scale = Vector2( 1.75287, 1.9584 )
 texture = ExtResource( 1 )
 
@@ -33,10 +33,16 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
+<<<<<<< HEAD
+margin_left = 40.0
+margin_right = 384.0
+margin_bottom = 303.0
+=======
 margin_left = -18.0
 margin_top = -30.0
 margin_right = 293.0
 margin_bottom = 270.0
+>>>>>>> 011b349100b464a495be2c6d9396b7018bb80144
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
