@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://poke/map.png" type="Texture" id=1]
 [ext_resource path="res://poke/Pikachu gelb.png" type="Texture" id=2]
+[ext_resource path="res://KnopfzumKampf.gd" type="Script" id=3]
+[ext_resource path="res://poke/pokecoin.png" type="Texture" id=4]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="Sprite2" type="Sprite" parent="." index="0"]
 
@@ -23,6 +25,7 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 3 )
 
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer" index="0"]
 
@@ -30,8 +33,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 254.0
+margin_top = 178.0
+margin_right = 565.0
+margin_bottom = 478.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -43,5 +48,9 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
+texture_normal = ExtResource( 4 )
+_sections_unfolded = [ "Textures" ]
+
+[connection signal="pressed" from="CanvasLayer/TextureButton" to="CanvasLayer" method="_on_TextureButton_pressed"]
 
 
