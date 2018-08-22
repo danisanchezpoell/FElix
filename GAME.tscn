@@ -6,7 +6,6 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://muenze.tscn" type="PackedScene" id=5]
 
-<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -27,8 +26,6 @@ extents = Vector2( 10, 0.193331 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 17.7482 )
 
-=======
->>>>>>> c7f713f71fe2d5aa53761dfb9092f561dd2a177a
 [node name="GAME" type="Node"]
 
 script = ExtResource( 1 )
