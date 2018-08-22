@@ -146,7 +146,7 @@ tracks/0/keys = {
 "values": [ false, true, false, true, false, true, false ]
 }
 
-[node name="Kampfszene" type="Node2D"]
+[node name="Kampfszene" type="Node2D" index="0"]
 
 position = Vector2( -16.1097, -14.7318 )
 scale = Vector2( 0.496572, 0.539631 )
