@@ -6,6 +6,12 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://muenze.tscn" type="PackedScene" id=5]
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0bc5530526c397238a072f12c5b828fdb9ab9feb
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -26,6 +32,12 @@ extents = Vector2( 10, 0.193331 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 17.7482 )
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c7f713f71fe2d5aa53761dfb9092f561dd2a177a
+>>>>>>> e7e88a4d4c209063437d647ea866fdf3ed84455a
+>>>>>>> 0bc5530526c397238a072f12c5b828fdb9ab9feb
 [node name="GAME" type="Node"]
 
 script = ExtResource( 1 )
@@ -34,8 +46,8 @@ script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-position = Vector2( 794.768, 436.73 )
-scale = Vector2( 1.66184, 1.90869 )
+position = Vector2( 620.275, 415 )
+scale = Vector2( 1.32103, 1.82381 )
 texture = ExtResource( 3 )
 
 [node name="KinematicBody2D" parent="." index="2" instance=ExtResource( 4 )]
