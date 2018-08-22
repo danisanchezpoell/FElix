@@ -13,6 +13,8 @@ func _hide():
 func _show():
 	$button/TextureButton.show()
 
+func _ready():
+	Manager.battlebutton = self
 	
 
 func _on_TextureButton_pressed():

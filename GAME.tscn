@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://GAME.gd" type="Script" id=1]
 [ext_resource path="res://button.tscn" type="PackedScene" id=2]
@@ -6,6 +6,32 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://muenze.tscn" type="PackedScene" id=5]
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 17.9557 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 0.193331 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 17.7482 )
+
+=======
+>>>>>>> c7f713f71fe2d5aa53761dfb9092f561dd2a177a
+>>>>>>> e7e88a4d4c209063437d647ea866fdf3ed84455a
 [node name="GAME" type="Node"]
 
 script = ExtResource( 1 )
@@ -46,5 +72,41 @@ text = "0"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="5"]
+
+position = Vector2( -33.5056, 353.833 )
+scale = Vector2( 3.57736, 28.2179 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+
+position = Vector2( -0.433729, 5.5169 )
+scale = Vector2( 1, 1.14164 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" index="1"]
+
+position = Vector2( 267.84, -13.9702 )
+scale = Vector2( 32.4914, 0.145504 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="2"]
+
+position = Vector2( 206.47, 19.772 )
+scale = Vector2( 28.616, 2.58283 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" index="3"]
+
+position = Vector2( 475.901, 3.25052 )
+scale = Vector2( 3.57149, 1.05721 )
+shape = SubResource( 4 )
 
 

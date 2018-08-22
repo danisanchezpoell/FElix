@@ -10,8 +10,8 @@ func _ready():
 func collect(body):
 	global.coin_counter += 1
 	$Label.text = str(global.coin_counter)
-	if global.coin_counter == 15:
-		#Manager.battlebutton._show()
+	if global.coin_counter == 1:
+		Manager.battlebutton._show()
 		pass
 	#randi()%11+1
 	
