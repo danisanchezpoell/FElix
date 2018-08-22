@@ -13,13 +13,13 @@ func _ready():
 func _physics_process(delta):
 	var motion = Vector2()
 	if Input.is_key_pressed(KEY_A):
-		move_and_slide(Vector2(-150, 0))
+		move_and_slide(Vector2(-250, 0))
 	if Input.is_key_pressed(KEY_D):
-		move_and_slide(Vector2(150, 0))
+		move_and_slide(Vector2(250, 0))
 	if Input.is_key_pressed(KEY_W):
-		move_and_slide(Vector2(0, -150))
+		move_and_slide(Vector2(0, -250))
 	if Input.is_key_pressed(KEY_S):
-		move_and_slide(Vector2(0, 150))
+		move_and_slide(Vector2(0, 250))
 	
 
 #func _process(delta):

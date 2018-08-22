@@ -10,6 +10,9 @@ func _ready():
 func collect(body):
 	global.coin_counter += 1
 	$Label.text = str(global.coin_counter)
+	if global.coin_counter == 15:
+		#Manager.battlebutton._show()
+		pass
 	#randi()%11+1
 	
 	$Node2D.position=Vector2(randi()%int(OS.window_size.x), randi()%int(OS.window_size.y))
