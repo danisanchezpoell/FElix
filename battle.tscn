@@ -13,9 +13,9 @@
 [sub_resource type="Animation" id=1]
 
 resource_name = "donner"
-length = 1.0
+length = 2.0
 loop = false
-step = 0.1
+step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("spieler/Sprite/Sprite:position")
 tracks/0/interp = 1
@@ -26,7 +26,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1467.62, 120.751 ), Vector2( 4082.58, 129.879 ), Vector2( 7309.45, -72.3887 ) ]
+"values": [ Vector2( 1467.62, 120.751 ), Vector2( 4082.58, 129.879 ), Vector2( 5350.38, 71.6052 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("spieler/Sprite/Sprite:visible")
@@ -35,7 +35,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7, 0.8, 1 ),
+"times": PoolRealArray( 0, 0.5, 0.7, 0.9, 1.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ true, false, false, true, false ]
@@ -99,7 +99,7 @@ tracks/2/keys = {
 [sub_resource type="Animation" id=3]
 
 resource_name = "Sternschauer"
-length = 1.0
+length = 1.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -126,6 +126,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Vector2( 1037.3, 100.718 ), Vector2( 7203.33, 271.049 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("gegner/Sprite2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1136.71, 748.799 ), Vector2( 869.95, 745.189 ) ]
+}
 
 [sub_resource type="Animation" id=4]
 
@@ -146,7 +158,7 @@ tracks/0/keys = {
 "values": [ false, true, false, true, false, true, false ]
 }
 
-[node name="Kampfszene" type="Node2D"]
+[node name="Kampfszene" type="Node2D" index="0"]
 
 position = Vector2( -16.1097, -14.7318 )
 scale = Vector2( 0.496572, 0.539631 )
@@ -161,7 +173,8 @@ _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform",
 
 [node name="spieler" type="Node2D" parent="." index="1"]
 
-position = Vector2( 149.324, 439.836 )
+position = Vector2( 155.659, 357.717 )
+scale = Vector2( 1.30586, 1.3816 )
 
 [node name="Label2" type="Label" parent="spieler" index="0"]
 
@@ -196,7 +209,7 @@ Attackcost = 10
 [node name="Sprite" type="Sprite" parent="spieler/Sprite" index="0"]
 
 visible = false
-position = Vector2( 7309.45, -72.3887 )
+position = Vector2( 5350.38, 71.6052 )
 scale = Vector2( 7.39597, -8.19285 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform", "Visibility" ]
@@ -405,9 +418,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 1352.0
-margin_top = 651.0
+margin_top = 665.0
 margin_right = 1398.0
-margin_bottom = 665.0
+margin_bottom = 679.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -425,10 +438,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 245.0
-margin_top = 608.0
-margin_right = 294.0
-margin_bottom = 622.0
+margin_left = 259.0
+margin_top = 590.0
+margin_right = 335.0
+margin_bottom = 604.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -455,9 +468,10 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Sprite2" parent="gegner" index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 832.447, 747.643 )
+position = Vector2( 869.95, 745.189 )
 scale = Vector2( 0.580203, 0.584984 )
 texture = ExtResource( 8 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 HP = 500
 Attackcost = null
 Attacktype = null
@@ -465,7 +479,7 @@ Attacktype = null
 [node name="Sprite" type="Sprite" parent="gegner" index="2"]
 
 visible = false
-position = Vector2( -271.754, 705.266 )
+position = Vector2( -234.947, 712.273 )
 scale = Vector2( 0.578103, 0.699188 )
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Visibility" ]
@@ -497,10 +511,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 744.0
-margin_top = 809.0
-margin_right = 976.0
-margin_bottom = 838.0
+margin_left = 718.0
+margin_top = 800.0
+margin_right = 1000.0
+margin_bottom = 835.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
