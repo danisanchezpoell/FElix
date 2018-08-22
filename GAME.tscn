@@ -6,6 +6,44 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://muenze.tscn" type="PackedScene" id=5]
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0bc5530526c397238a072f12c5b828fdb9ab9feb
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 17.9557 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 0.193331 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 17.7482 )
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c7f713f71fe2d5aa53761dfb9092f561dd2a177a
+>>>>>>> e7e88a4d4c209063437d647ea866fdf3ed84455a
+>>>>>>> 0bc5530526c397238a072f12c5b828fdb9ab9feb
+>>>>>>> 5befde726e2b12e466f456d4efc4497ba0756c51
+>>>>>>> 3ce6956a7244b8d0861bd40ef593bced49577e47
 [node name="GAME" type="Node"]
 
 script = ExtResource( 1 )
