@@ -17,18 +17,18 @@ func _on_at_pressed():
 		
 	var attackpower = $spieler/Sprite.Strenght
 	$gegner/ProgressBar2
+	$AnimationPlayer4.play("Heal")
 	
 	print($spieler/Sprite.Attacktype)
 	if $spieler/Sprite.Attacktype == "Grass":
-		$gegner/ProgressBar2.value -= 20
+		$spieler/ProgressBar.value += 20
 	elif $spieler/Sprite.Attacktype == "Thunder":
-		$gegner/ProgressBar2.value -= 60
+		$spieler/ProgressBar.value += 20
 	elif $spieler/Sprite.Attacktype == "Water":
-		$gegner/ProgressBar2.value -= 40
+		$spieler/ProgressBar.value += 20
 	elif $spieler/Sprite.Attacktype == "Fire":
-		$gegner/ProgressBar2.value -= 30
+		$spieler/ProgressBar.value += 20
 # gegner ist dran
-	$spieler/ProgressBar.value -= 20
 	if  $gegner/ProgressBar2.value == 0 :
 		get_tree().change_scene("res://victory.tscn")
 	
@@ -68,7 +68,7 @@ func _on_at3_pressed():
 	if $spieler/Sprite.Attacktype == "Grass":
 		$gegner/ProgressBar2.value -= 20
 	elif $spieler/Sprite.Attacktype == "Thunder":
-		$gegner/ProgressBar2.value -= 60
+		$gegner/ProgressBar2.value -= 70
 	elif $spieler/Sprite.Attacktype == "Water":
 		$gegner/ProgressBar2.value -= 40
 	elif $spieler/Sprite.Attacktype == "Fire":
@@ -85,7 +85,7 @@ func _on_at4_pressed():
 		
 	var attackpower = $spieler/Sprite.Strenght
 	$gegner/ProgressBar2
-	
+	$AnimationPlayer3.play("Sternschauer")
 	print($spieler/Sprite.Attacktype)
 	if $spieler/Sprite.Attacktype == "Grass":
 		$gegner/ProgressBar2.value -= 20

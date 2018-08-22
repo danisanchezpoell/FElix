@@ -11,12 +11,16 @@ config_version=3
 [application]
 
 config/name="pokemon"
-run/main_scene="res://Node2D.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 global="*res://global.gd"
+
+[display]
+
+window/size/resizable=false
+window/size/fullscreen=true
 
 [rendering]
 
