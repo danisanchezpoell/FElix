@@ -30,7 +30,7 @@ func _on_at_pressed():
 # gegner ist dran
 	$spieler/ProgressBar.value -= 20
 	if  $gegner/ProgressBar2.value == 0 :
-		get_tree().change_scene("res://GAmeover.tscn")
+		get_tree().change_scene("res://victory.tscn")
 	
 func _on_at2_pressed():
 	print($spieler/Sprite.AP)
@@ -54,7 +54,7 @@ func _on_at2_pressed():
 # gegner ist dran
 	$spieler/ProgressBar.value -= 20
 	if  $gegner/ProgressBar2.value == 0 :
-		get_tree().change_scene("res://GAmeover.tscn")
+		get_tree().change_scene("res://victory.tscn")
 func _on_at3_pressed():
 	$spieler/Sprite.AP -=5
 	$spieler/Label4.text = str($spieler/Sprite.AP)
@@ -76,7 +76,7 @@ func _on_at3_pressed():
 # gegner ist dran
 	$spieler/ProgressBar.value -= 20
 	if  $gegner/ProgressBar2.value == 0 :
-		get_tree().change_scene("res://GAmeover.tscn")
+		get_tree().change_scene("res://victory.tscn")
 func _on_at4_pressed():
 	$spieler/Sprite.AP -=5
 	$spieler/Label4.text = str($spieler/Sprite.AP)
@@ -98,5 +98,5 @@ func _on_at4_pressed():
 # gegner ist dran
 	$spieler/ProgressBar.value -= 20
 	if  $gegner/ProgressBar2.value == 0 :
-		get_tree().change_scene("res://GAmeover.tscn")
+		get_tree().change_scene("res://victory.tscn")
 	
